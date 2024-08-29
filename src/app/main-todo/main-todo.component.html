@@ -1,1 +1,32 @@
-<p>main-todo works!</p>
+<div>
+    <mat-form-field appearance="outline">
+        <mat-label>TO-DO</mat-label>
+        <input matInput [(ngModel)]="value" placeholder="Enter Your To Do Item...">
+        <button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
+            <mat-icon color="warn">close</mat-icon>
+          </button>
+    </mat-form-field>
+    <div class="center">
+        <button mat-raised-button color="accent" (click)="addTodo()">
+            <mat-icon>add</mat-icon>
+            ADD
+        </button>
+        <button mat-raised-button color="warn" (click)="deleteAllTodo()">
+            <mat-icon>delete</mat-icon>
+            DELETE ALL
+        </button>
+    </div>
+
+    <div class="list">
+        <mat-toolbar color="primary" class="mat-elevation-z6" *ngFor="let todo of todolist; let i=index">
+            <mat-toolbar-row>
+                <span>{{todo}}</span>
+                <span class="example-spacer"></span>
+                <mat-icon class="example-icon" (click)="deleteTodo(i)">delete</mat-icon>
+                <mat-divider>
+                </mat-divider>
+            </mat-toolbar-row>
+        </mat-toolbar>
+    </div>
+
+</div>

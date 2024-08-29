@@ -1,0 +1,32 @@
+.mat-card {
+  width: 100%;
+}
+.example-icon {
+  padding: 0 14px;
+}
+.example-spacer {
+  flex: 1 1 auto;
+}
+.mat-toolbar.mat-primary {
+  width: 95%;
+  margin: 24px auto;
+  padding: 0 16px;
+  box-sizing: border-box;
+}
+button {
+  margin-right: 16px;
+}
+.mat-form-field{
+  display: block;
+  margin: 24px auto;
+  width: 50%;
+}
+.center {
+  text-align: center;
+}
+.list {
+  padding: 16px 8px;
+  margin: 36px 16px;
+  border: 1px solid rgba(255,255,255,.2);
+  border-radius: 5px;
+}
